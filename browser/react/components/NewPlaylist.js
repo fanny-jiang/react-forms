@@ -31,8 +31,16 @@ const NewPlaylist = function(props) {
         </div>
         </fieldset>
       </form>
+
+      {
+        (props.changeOccurred && props.invalid) ?
+            <div className="alert alert-warning">Please enter a name</div>
+            : null
+      }
+
     </div>
   );
 }
 
 export default NewPlaylist;
+
