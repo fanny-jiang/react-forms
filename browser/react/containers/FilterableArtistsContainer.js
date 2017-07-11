@@ -24,7 +24,7 @@ export default class FilterableArtistsContainer extends Component {
   render () {
     const inputValue = this.state.inputValue;
     const filteredArtists = this.props.artists.filter(artist =>
-      artist.name.toLowerCase().match(inputValue.toLowerCase()));
+      artist.name.toLowerCase().includes(inputValue.toLowerCase()));
       {/* need to change artist.name and input value to lowercase so that they'll match */}
 
       { console.log('IMPUT VALUE: ', inputValue);}
